@@ -154,6 +154,6 @@ El proyecto cuenta con un achivo .yml para representar datos estructurados de fo
 
 Desarrollado por: **Christian Villegas Suarez**  
 📧 Contacto: [cristvs95@gmail.com](mailto:cristvs95@gmail.com)  
-🔗 GitHub: [github.com/paradox-t1m3](https://github.com/paradox-t1m3/RetoSoftka-AutomatizacionWeb)
+🔗 GitHub: [github.com/cristianvillegas95](https://github.com/paradox-t1m3/RetoSoftka-AutomatizacionWeb)
 
 ---
