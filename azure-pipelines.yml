@@ -1,0 +1,16 @@
+trigger:
+  - main
+
+pool:
+  vmImage: 'agente a usar'
+
+steps:
+  - task: Gradle@3
+    inputs:
+      gradleWrapperFile: 'gradlew'
+      tasks: 'clean test sonarqube'
+      options: >
+        -Dsonar.projectKey=llave de sonar 
+        -Dsonar.organization=organizacion sonar
+        -Dsonar.host.url= url de sonbar -> https://sonarcloud.io 
+        -Dsonar.login=$(token sonar)

@@ -27,6 +27,10 @@ public enum DriverEnum {
             options.addArguments("--incognito");
             options.addArguments(IGNORE_CERTIFICATES_ERROR);
             options.addArguments(IGNORE_CERTIFICATES_ERROR_SSL);
+            if(HEADLESS_EXCECUTE.equalsIgnoreCase("YES")){
+                options.addArguments(HEADLESS_STRING, "--disable-gpu");
+                options.addArguments(HEADLESS_AGENT);
+            }
             options.addArguments(REMOTE_ALLOW_ORIGINS);
             options.addArguments("force-device-scale-factor=0.80", "high-dpi-support=0.80");
             webDriver = new ChromeDriver(options);
@@ -43,6 +47,10 @@ public enum DriverEnum {
             options.addArguments("--incognito");
             options.addArguments(IGNORE_CERTIFICATES_ERROR);
             options.addArguments(IGNORE_CERTIFICATES_ERROR_SSL);
+            if(HEADLESS_EXCECUTE.equalsIgnoreCase("YES")){
+                options.addArguments(HEADLESS_STRING, "--disable-gpu");
+                options.addArguments(HEADLESS_AGENT);
+            }
             options.addArguments(REMOTE_ALLOW_ORIGINS);
             options.addArguments("force-device-scale-factor=0.80", "high-dpi-support=0.80");
             webDriver = new EdgeDriver(options);

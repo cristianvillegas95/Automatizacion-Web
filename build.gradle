@@ -1,7 +1,22 @@
 plugins {
     id 'java'
     id 'net.serenity-bdd.serenity-gradle-plugin' version '4.2.34'
+    id "org.sonarqube" version "4.4.1.3373"
     id 'org.gradle.test-retry' version '1.6.2'
+
+}
+
+sonarqube {
+    properties {
+        property "sonar.projectKey", "nombre llave"
+        property "sonar.organization", "organizacion"
+        //property "sonar.host.url", "https://sonarcloud.io" //sonar cloud
+        property "sonar.host.url", "http://localhost:9000" //sonar local
+        property "sonar.login", System.getenv("sonar")
+        property "sonar.sources", "src/main/java"
+        property "sonar.tests", "src/test/java"
+        property "sonar.java.binaries", "build/classes/java/main"
+    }
 }
 
 group = "us.abstracta.opencart"
