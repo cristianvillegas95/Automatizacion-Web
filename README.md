@@ -97,6 +97,9 @@ git remote add origin "https://github.com/paradox-t1m3/RetoSoftka-Automatizacion
 git config --global user.name "TuNombreDeUsuarioGitHub"
 git config --global user.email "tuemail@ejemplo.com"
 
+# Quitar credenciales anteriores
+git credential-cache exit
+
 # Revisar cambios en working area
 git status
 
