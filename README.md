@@ -97,6 +97,9 @@ git remote add origin "https://github.com/paradox-t1m3/RetoSoftka-Automatizacion
 git config --global user.name "TuNombreDeUsuarioGitHub"
 git config --global user.email "tuemail@ejemplo.com"
 
+# Quitar credenciales anteriores
+git credential-cache exit
+
 # Revisar cambios en working area
 git status
 
@@ -122,6 +125,25 @@ git pull origin Rama
 - 📁 **Modularidad**: Agrupar funcionalidades por dominio o flujo para facilitar la escalabilidad
 - 🧪 **Datos dinámicos y aislados**: Usar JavaFaker y modelos para evitar colisiones en pruebas concurrentes
 - 📊 **Reportes legibles**: Serenity genera evidencia visual y narrativa, útil para QA, Dev y stakeholders
+
+# 🔑 Configuración de SonarQube/SonarCloud
+
+## Crear variable de entorno con el token
+
+En **Windows PowerShell**, define tu token de SonarQube/SonarCloud como variable de entorno:
+
+```powershell
+setx SONAR_TOKEN "tu_token_generado"
+```
+
+Ejecutar por terminal 
+
+```powershell
+./gradlew clean test sonarqube
+```
+# 📄 Archivo .yml para Pipelines en Azure DevOps
+
+El proyecto cuenta con un achivo .yml para representar datos estructurados de forma sencilla y legible en un pipeline
 
 ## 📄 Reportes Generados
 

@@ -21,7 +21,7 @@ import static us.abstracta.opencart.userinterfaces.CheckoutInterface.*;
 
 public class CompleteCheckoutInteraction implements Interaction {
 
-    private final Faker faker = new Faker(Locale.of("es-CO"));
+    private final Faker faker = new Faker(new Locale("es", "CO"));
 
     @Override
     public <T extends Actor> void performAs(T actor) {
